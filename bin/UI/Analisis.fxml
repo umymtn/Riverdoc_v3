@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1280.0" stylesheets="@../CSS/Tampilan.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Analisis">
+   <children>
+      <ImageView fitHeight="780.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Photo/PD_Page.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="142.0" layoutX="57.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Photo/Riverdoc.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="834.0" layoutY="64.0" onAction="#keHomePage" style="-fx-cursor: hand;" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="929.0" layoutY="64.0" onAction="#keCekStatusMutu" style="-fx-cursor: hand;" text="CEK STATUS MUTU" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1128.0" layoutY="64.0" onAction="#keArticlePage" style="-fx-cursor: hand;" text="ARTIKEL" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="31.0" layoutY="109.0" prefHeight="78.0" prefWidth="1217.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+      <Label fx:id="NamaStasiun" layoutX="60.0" layoutY="130.0" style="-fx-effect: dropshadow(gaussian, rgba(80, 80, 80, 0.806), 3, 0, 0, 2);" text="Nama Stasiun" textFill="#1b9a7b">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <VBox layoutX="31.0" layoutY="204.0" prefHeight="500.0" prefWidth="1217.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <BorderPane fx:id="mainPane" prefHeight="500.0" prefWidth="1217.0">
+               <top>
+                  <HBox prefHeight="55.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="SM" onAction="#keStatusMutu" prefHeight="50.0" prefWidth="406.0" style="-fx-background-color: #3D6A36;" text="STATUS MUTU" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="PS" onAction="#keProfilStasiun" prefHeight="50.0" prefWidth="406.0" text="PROFIL STASIUN">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="GT" onAction="#keGrafikTrend" prefHeight="50.0" prefWidth="406.0" text="GRAFIK TREND">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <ScrollPane prefHeight="450.0" prefWidth="1217.0" BorderPane.alignment="CENTER">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="820.0" prefWidth="1217.0">
+                           <children>
+                              <TableView fx:id="Table" layoutX="25.0" layoutY="10.0" prefHeight="69.0" prefWidth="1155.0">
+                                 <columns>
+                                    <TableColumn fx:id="DAS" prefWidth="260.66661643981934" style="-fx-alignment: center;" text="DAS" />
+                                    <TableColumn fx:id="IP" prefWidth="190.66668701171875" style="-fx-alignment: center;" text="Indeks Pencemar" />
+                                    <TableColumn fx:id="SMA" prefWidth="278.6666564941406" style="-fx-alignment: center;" text="Status Mutu Air" />
+                                    <TableColumn fx:id="PK" prefWidth="217.3333740234375" style="-fx-alignment: center;" text="Parameter Kritis" />
+                                    <TableColumn fx:id="TD" prefWidth="201.99981689453125" style="-fx-alignment: center;" text="Tanggal Data" />
+                                 </columns>
+                              </TableView>
+                              <BarChart fx:id="Bar" layoutX="79.0" layoutY="105.0" prefHeight="400.0" prefWidth="1047.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                              <ImageView fitHeight="207.0" fitWidth="1004.0" layoutX="117.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Photo/IndeksParameter.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

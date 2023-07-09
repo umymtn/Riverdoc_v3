@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1217.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ProfilStasiun">
+   <children>
+      <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1217.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="1217.0">
+               <children>
+                  <Label layoutX="25.0" layoutY="25.0" prefHeight="73.0" prefWidth="293.0" style="-fx-border-color: grey;" text="     Kategori Stasiun">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="98.0" prefHeight="73.0" prefWidth="293.0" style="-fx-border-color: grey;" text="     Kategori Lokasi">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="171.0" prefHeight="73.0" prefWidth="293.0" style="-fx-border-color: grey;" text="     Segmen">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="244.0" prefHeight="110.0" prefWidth="293.0" style="-fx-border-color: grey;" text="     Alamat">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="354.0" prefHeight="550.0" prefWidth="293.0" style="-fx-border-color: grey;" text="     Foto">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="25.0" prefHeight="73.0" prefWidth="47.0" style="-fx-border-color: grey;" text="   :  ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="98.0" prefHeight="73.0" prefWidth="47.0" style="-fx-border-color: grey;" text="   :  ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="171.0" prefHeight="73.0" prefWidth="47.0" style="-fx-border-color: grey;" text="   :  ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="244.0" prefHeight="110.0" prefWidth="47.0" style="-fx-border-color: grey;" text="   :  ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="318.0" layoutY="354.0" prefHeight="550.0" prefWidth="47.0" style="-fx-border-color: grey;" text="   :  ">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="25.0" prefHeight="73.0" prefWidth="815.0" style="-fx-border-color: grey;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="98.0" prefHeight="73.0" prefWidth="815.0" style="-fx-border-color: grey;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="171.0" prefHeight="73.0" prefWidth="815.0" style="-fx-border-color: grey;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="244.0" prefHeight="110.0" prefWidth="815.0" style="-fx-border-color: grey;">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="365.0" layoutY="354.0" prefHeight="550.0" prefWidth="815.0" style="-fx-border-color: grey;">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="foto" fitHeight="425.0" fitWidth="350.0" layoutX="390.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXTextArea fx:id="alamat" focusColor="#405aa800" layoutX="389.0" layoutY="244.0" prefHeight="112.0" prefWidth="789.0" style="-fx-font-size: 20; -fx-font-weight: bold;" unFocusColor="#4d4d4d00" />
+                  <Label fx:id="segmen" layoutX="391.0" layoutY="171.0" prefHeight="73.0" prefWidth="789.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="kl" layoutX="391.0" layoutY="98.0" prefHeight="73.0" prefWidth="789.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ks" layoutX="391.0" layoutY="25.0" prefHeight="73.0" prefWidth="789.0">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
